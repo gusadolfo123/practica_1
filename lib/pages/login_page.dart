@@ -62,7 +62,8 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: [
                 Expanded(child: Container()),
-                BottomSlideWidget(controller: _pageController),
+                Text("asd"),
+                BottomSlideWidget(),
               ],
             ),
           ],
