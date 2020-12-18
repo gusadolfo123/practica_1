@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica_1/pages/global_settings_page.dart';
-import 'package:practica_1/pages/login_page.dart';
+import 'package:practica_1/pages/login_section/main_login_page.dart';
 
 class Item {
   String name;
@@ -11,7 +11,7 @@ class Item {
 class HomePage extends StatelessWidget {
   static const name = "home_page";
   final listItems = [
-    Item(name: "Login", route: LoginPage.name),
+    Item(name: "Login", route: MainLoginPage.name),
     Item(name: "Global Settings", route: GlobalSettingsPage.name),
     Item(name: "List With Hero", route: GlobalSettingsPage.name),
   ];

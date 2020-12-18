@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:practica_1/pages/page_1.dart';
-import 'package:practica_1/pages/page_2.dart';
-import 'package:practica_1/widgets/bottom_slide_widget.dart';
+import 'package:practica_1/pages/login_section/page_0.dart';
+import 'package:practica_1/pages/login_section/page_1.dart';
+import 'package:practica_1/pages/login_section/page_2.dart';
+import 'package:practica_1/widgets/login/bottom_slide_widget.dart';
 
-class LoginPage extends StatefulWidget {
-  static final name = "login_page";
+class MainLoginPage extends StatefulWidget {
+  static final name = "main_login_page";
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _MainLoginPageState createState() => _MainLoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _MainLoginPageState extends State<MainLoginPage> {
   PageController _pageController = PageController(initialPage: 1);
   int _page = 1;
 
@@ -28,9 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: _pageController,
               children: [
-                Center(
-                  child: Text("Page 1,"),
-                ),
+                Page0(),
                 Page1(),
                 Page2(),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica_1/pages/login_section/login_page.dart';
 
 class BottomSlideWidget extends StatelessWidget {
   @override
@@ -16,7 +17,9 @@ class BottomSlideWidget extends StatelessWidget {
           ),
           Expanded(child: Container()),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, LoginPage.name);
+            },
             child: Text("Log In", style: textStyles),
           ),
         ],
