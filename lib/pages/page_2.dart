@@ -82,10 +82,13 @@ class Page2 extends StatelessWidget {
                             Icon(Icons.favorite, color: Colors.grey[600]),
                           ],
                         ),
-                        Text(
-                          "Mobile Application Designer",
-                          style: TextStyle(
-                              fontSize: 26, fontWeight: FontWeight.bold),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Mobile Application Designer",
+                            style: TextStyle(
+                                fontSize: 26, fontWeight: FontWeight.bold),
+                          ),
                         ),
                         SizedBox(height: 10),
                         Row(
