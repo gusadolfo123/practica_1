@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  PageController _pageController = PageController();
+  PageController _pageController = PageController(initialPage: 1);
   int _page = 1;
 
   @override
