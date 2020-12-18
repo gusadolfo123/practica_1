@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Page2 extends StatefulWidget {
-  const Page2({Key key}) : super(key: key);
-
-  @override
-  _Page2State createState() => _Page2State();
-}
-
-class _Page2State extends State<Page2> {
+class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -73,12 +66,128 @@ class _Page2State extends State<Page2> {
                     left: size.width * 0.15,
                     right: size.width * 0.15,
                   ),
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Design",
+                              style: TextStyle(
+                                  color: Colors.grey[500],
+                                  fontWeight: FontWeight.w900),
+                            ),
+                            Icon(Icons.favorite, color: Colors.grey[600]),
+                          ],
+                        ),
+                        Text(
+                          "Mobile Application Designer",
+                          style: TextStyle(
+                              fontSize: 26, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Text(
+                              "Remote |",
+                              style: TextStyle(color: Colors.grey[500]),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "Full Time |",
+                              style: TextStyle(color: Colors.grey[500]),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              "46k Yr",
+                              style: TextStyle(color: Colors.grey[500]),
+                            ),
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    child: Icon(
+                                      Icons.circle,
+                                      size: 36,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                  Positioned(
+                                    child: Icon(
+                                      Icons.circle,
+                                      size: 36,
+                                      color: Colors.grey[600],
+                                    ),
+                                    left: 16,
+                                  ),
+                                  Positioned(
+                                    child: Icon(
+                                      Icons.circle,
+                                      size: 36,
+                                      color: Colors.grey[600],
+                                    ),
+                                    left: 32,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            FlatButton(
+                              color: Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(20),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                "APPLY",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
-            Text(
-              "prueba",
-              style: TextStyle(color: Colors.white),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Welcome!",
+                    style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white),
+                  ),
+                  SizedBox(height: 10),
+                  Container(
+                    width: 220,
+                    child: Text(
+                      "lorem ipsum dolor sit amet, consectetur adiscimp elit, set do el ouiso tempor",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey[600],
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
