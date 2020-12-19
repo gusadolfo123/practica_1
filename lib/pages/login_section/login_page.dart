@@ -10,16 +10,17 @@ class LoginPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         // color: Colors.white,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/img/back.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
-        height: size.height,
-        width: size.width,
+        height: double.infinity,
+        width: double.infinity,
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -86,11 +87,16 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(height: 20),
+                        InkWell(
+                          onTap: () {},
+                          child: Text("Sign Up"),
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(height: 20),
-                  SizedBox(height: size.height * 0.3 - 80, child: Container()),
+                  SizedBox(height: size.height * 0.3, child: Container()),
                 ],
               ),
             ],
